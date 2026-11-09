@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Ironclad Stripe Sandbox",
+  "version": "4.0.0",
+  "description": "Sequential official Stripe Sandbox scenarios with delay and a result log.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Ironclad · Stripe Sandbox"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src http://127.0.0.1:8765"
+  }
+}

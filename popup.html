@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><title>Ironclad · Stripe Sandbox</title>
+<link rel="stylesheet" href="sandbox/popup.css"></head><body>
+<header><h1>Ironclad</h1><strong>STRIPE SANDBOX · v4</strong></header>
+<p>Последовательный прогон официальных тестовых сценариев. Сумма: 1 USD в Sandbox на сценарий.</p>
+<label for="token">Локальный токен из окна сервера</label>
+<input id="token" type="password" autocomplete="off" placeholder="Local access token">
+<label for="cards">Сценарии / официальные тестовые карты</label>
+<textarea id="cards" rows="6" spellcheck="false" placeholder="visa&#10;declined&#10;insufficient_funds"></textarea>
+<small>Имена сценариев, pm_card_* или тестовый номер|MM|YYYY|CVC. JSON-массив также поддерживается. Срок/CVC игнорируются: API получает только официальный тестовый PaymentMethod.</small>
+<label for="delay">Пауза после результата, мс (500–30000)</label>
+<input id="delay" type="number" min="500" max="30000" step="100" value="2000">
+<div class="buttons"><button id="fixtures">Тестовый набор</button><button id="load">TXT / CSV / JSON</button></div>
+<input id="file" type="file" accept=".txt,.csv,.json" hidden>
+<div class="buttons"><button id="run">Запустить</button><button id="stop" disabled>Стоп</button><button id="export">Журнал JSON</button></div>
+<progress id="progress" max="1" value="0"></progress>
+<p id="status" role="status">Запустите sandbox/start.ps1 и вставьте локальный токен.</p>
+<pre id="log" aria-live="polite"></pre>
+<small>Очередь работает на локальном сервере при закрытом popup. Перезапуск сервера не возобновляет прогон. Стоп отменяет следующие сценарии, но не уже отправленный тестовый запрос.</small>
+<script src="sandbox/fixtures.js"></script><script src="popup.js"></script>
+</body></html>

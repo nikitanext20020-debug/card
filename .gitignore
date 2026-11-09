@@ -1,0 +1,16 @@
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/manifest.json
+!/background.js
+!/popup.html
+!/popup.js
+!/sandbox/
+/sandbox/*
+!/sandbox/fixtures.js
+!/sandbox/server.cjs
+!/sandbox/popup.css
+!/sandbox/start.ps1
+!/sandbox/README.md
+!/sandbox/tests.cjs
